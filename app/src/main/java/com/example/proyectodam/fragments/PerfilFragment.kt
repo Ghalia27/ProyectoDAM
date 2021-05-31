@@ -12,7 +12,8 @@ import com.example.proyectodam.SignIn
 import com.example.proyectodam.SignUp
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_perfil.*
-
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +29,7 @@ class PerfilFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private val list = mutableListOf<CarouselItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +40,7 @@ class PerfilFragment : Fragment() {
 
     }
 
-    fun ingresar(v: View) {
+    /*fun ingresar(v: View) {
         btnSignIn.setOnClickListener {
             val intent = Intent(
                 this@PerfilFragment.activity,
@@ -56,7 +58,7 @@ class PerfilFragment : Fragment() {
             )
             startActivity(intent)
         }
-    }
+    }*/
 
 
     override fun onCreateView(
@@ -77,6 +79,17 @@ class PerfilFragment : Fragment() {
             startActivity(intent2)
         })
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        list.clear()
+
+        val carousel: ImageCarousel = view.findViewById(R.id.carousel)
+        list.add(CarouselItem(R.drawable.slider1))
+        list.add(CarouselItem(R.drawable.slider2))
+        list.add(CarouselItem(R.drawable.slider3))
+        carousel.addData(list)
     }
 
     companion object {
