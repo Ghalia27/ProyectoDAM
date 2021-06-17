@@ -3,10 +3,14 @@ package com.example.proyectodam
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.proyectodam.fragments.BuscarFragment
 import com.example.proyectodam.fragments.MenuFragment
 import com.example.proyectodam.fragments.PerfilFragment
@@ -23,17 +27,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        replaceFragment(buscarFragment)
+        replaceFragment(perfilFragment)
 
-        /*btnSignIn.setOnClickListener(){
-            val i : Intent = Intent(this, SignIn::class.java)
-            startActivity(i)
-        }
-
-        btnSignUp.setOnClickListener(){
-            val i : Intent = Intent(this, SignUp::class.java)
-            startActivity(i)
-        }*/
+        val toolbar: Toolbar = findViewById(R.id.actionBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false);
+        navigation_bottom.selectedItemId = R.id.ic_perfil
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -52,17 +51,35 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.miItem1 -> Toast.makeText(applicationContext, "Clicked Item 1", Toast.LENGTH_SHORT).show()
-                R.id.miItem2 -> Toast.makeText(applicationContext, "Clicked Item 2", Toast.LENGTH_SHORT).show()
-                R.id.miItem3 -> Toast.makeText(applicationContext, "Clicked Item 3", Toast.LENGTH_SHORT).show()
+                R.id.miItem1 -> {
+                    replaceFragment(buscarFragment)
+                    navigation_bottom.selectedItemId = R.id.ic_buscar
+                }
+                R.id.miItem2 -> {
+                    replaceFragment(perfilFragment)
+                    navigation_bottom.selectedItemId = R.id.ic_perfil
+                }
+                R.id.miItem3 -> {
+                    replaceFragment(menuFragment)
+                    navigation_bottom.selectedItemId = R.id.ic_menu
+                }
+                R.id.miItem4 -> Toast.makeText(applicationContext, "Ajustes", Toast.LENGTH_SHORT).show()
+                R.id.miItem5 -> Toast.makeText(applicationContext, "Cerrar sesion", Toast.LENGTH_SHORT).show()
+                //R.id.miItem3 -> Toast.makeText(applicationContext, "Clicked Item 3", Toast.LENGTH_SHORT).show()
             }
+            drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.action_bar_items, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toggle.onOptionsItemSelected(item)){
-            return true
+            return false
         }
         return super.onOptionsItemSelected(item)
     }

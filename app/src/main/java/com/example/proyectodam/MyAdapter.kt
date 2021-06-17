@@ -45,6 +45,12 @@ class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
 
             var gImageView : Int = model.image
 
+            var gtel : String = model.tlfn
+            var gwts : String = model.wts
+            var gfbs : String = model.fcb
+            var gins : String = model.inst
+            var gweb : String = model.web
+
             val intent = Intent(context, DetalleRestaurante::class.java)
 
             intent.putExtra("iTipo", gTipo)
@@ -52,6 +58,11 @@ class MyAdapter(val arrayList: ArrayList<Model>, val context: Context) :
             intent.putExtra("iDescripcion", gDescripcion)
             intent.putExtra("iDireccion", gDireccion)
             intent.putExtra("iImageView", gImageView)
+            intent.putExtra("iTel", gtel)
+            intent.putExtra("iWts", gwts)
+            intent.putExtra("iFbs", gfbs)
+            intent.putExtra("iIns", gins)
+            intent.putExtra("iWeb", gweb)
 
             context.startActivity(intent)
 

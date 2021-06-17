@@ -11,6 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/actionBar"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+            tools:ignore="MissingConstraints" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation_bottom"
             android:layout_width="match_parent"

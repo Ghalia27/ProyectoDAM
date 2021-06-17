@@ -58,7 +58,12 @@ class BuscarFragment : Fragment() {
                 "Restaurante 1",
                 "Abierto / Cerrado",
                 "Distrito, calle del restaurante",
-                R.drawable.restaurante1
+                R.drawable.restaurante1,
+                    "tel:987654321",
+                    "51987654321",
+                    "https://www.facebook.com/McDonaldsPeru",
+                    "https://www.instagram.com/mcdonalds_peru/",
+                    "https://www.mcdonalds.com.pe"
             )
         )
         arrayList.add(
@@ -67,7 +72,12 @@ class BuscarFragment : Fragment() {
                 "Restaurante 2",
                 "Abierto / Cerrado",
                 "Distrito, calle del restaurante",
-                R.drawable.restaurante2
+                R.drawable.restaurante2,
+                    "tel:987654321",
+                    "51987654321",
+                    "https://www.facebook.com/McDonaldsPeru",
+                    "https://www.instagram.com/mcdonalds_peru/",
+                    "https://www.mcdonalds.com.pe"
             )
         )
         arrayList.add(
@@ -76,7 +86,12 @@ class BuscarFragment : Fragment() {
                 "Restaurante 3",
                 "Abierto / Cerrado",
                 "Distrito, calle del restaurante",
-                R.drawable.restaurante3
+                R.drawable.restaurante3,
+                    "tel:987654321",
+                    "51987654321",
+                    "https://www.facebook.com/McDonaldsPeru",
+                    "https://www.instagram.com/mcdonalds_peru/",
+                    "https://www.mcdonalds.com.pe"
             )
         )
         arrayList.add(
@@ -85,7 +100,12 @@ class BuscarFragment : Fragment() {
                 "Restaurante 4",
                 "Abierto / Cerrado",
                 "Distrito, calle del restaurante",
-                R.drawable.restaurante4
+                R.drawable.restaurante4,
+                    "tel:987654321",
+                    "51987654321",
+                    "https://www.facebook.com/McDonaldsPeru",
+                    "https://www.instagram.com/mcdonalds_peru/",
+                    "https://www.mcdonalds.com.pe"
             )
         )
         arrayList.add(
@@ -94,7 +114,12 @@ class BuscarFragment : Fragment() {
                 "Restaurante 5",
                 "Abierto / Cerrado",
                 "Distrito, calle del restaurante",
-                R.drawable.restaurante5
+                R.drawable.restaurante5,
+                    "tel:987654321",
+                    "51987654321",
+                    "https://www.facebook.com/McDonaldsPeru",
+                    "https://www.instagram.com/mcdonalds_peru/",
+                    "https://www.mcdonalds.com.pe"
             )
         )
         displayList.addAll(arrayList)

@@ -1,11 +1,14 @@
 package com.example.proyectodam.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.proyectodam.R
+import kotlinx.android.synthetic.main.fragment_menu.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,11 +34,39 @@ class MenuFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val builder = AlertDialog.Builder(context)
+
+        btn_contactanos.setOnClickListener {
+            // builder.setTitle("Mesa para dos")
+
+            val inflater = layoutInflater
+            builder.setView(inflater.inflate(R.layout.popup_menu_contact, null))
+
+            builder.setNegativeButton("OK", null)
+
+            builder.show()
+        }
+
+        btn_report.setOnClickListener {
+            // builder.setTitle("Mesa para dos")
+
+            val inflater = layoutInflater
+            builder.setView(inflater.inflate(R.layout.popup_menu_report, null))
+
+            builder.setNegativeButton("OK", null)
+
+            builder.show()
+        }
     }
 
     companion object {
