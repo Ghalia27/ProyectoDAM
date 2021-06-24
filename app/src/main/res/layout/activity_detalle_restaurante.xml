@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activityDetalle"
+    android:background="#fff"
+    tools:context=".DetalleRestaurante">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/actionBar"
+        android:elevation="2dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleView"
+        android:text="Nombre del restaurante"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/imageView"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipoView"
+        android:text="tipo restaurante"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/titleView"/>
+
+    <View
+        android:id="@+id/linea_separador1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/separador"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tipoView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/content_btn"
+        android:layout_below="@id/linea_separador1"
+        android:gravity="center"
+        tools:context=".DetalleRestaurante">
+
+        <ImageButton
+            android:id="@+id/btn_llamar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/phone"/>
+
+        <ImageButton
+            android:id="@+id/btn_whatsapp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/whatsapp" />
+
+        <ImageButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/facebook"/>
+
+        <ImageButton
+            android:id="@+id/btn_instagram"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/instagram"/>
+
+        <ImageButton
+            android:id="@+id/btn_web"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/chrome"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reservar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_radius"
+        android:text="Reservar"
+        android:textColor="@color/white"
+        android:layout_below="@id/content_btn"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/linea_separador2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/separador"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/btn_reservar"/>
+
+    <TextView
+        android:id="@+id/descripcionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linea_separador2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:text="Abierto"
+        android:textColor="@color/purple_700"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/direccionView"
+        android:text="Distrito, calle del restaurante"
+        android:textSize="12sp"
+        android:textColor="@color/purple_700"
+        android:layout_below="@id/descripcionView"
+        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

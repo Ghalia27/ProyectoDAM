@@ -119,12 +119,26 @@
         android:layout_marginBottom="20dp"
         android:text="Regístrate"/>
 
-    <TextView
-        android:layout_width="250dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingLeft="20dp"
-        android:text="¿Ya tienes una cuenta? Iniciar Sesión"
-        android:textColor="@color/black" />
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="¿Ya tienes una cuenta?"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/link_iniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="Inicia Sesión"
+            android:textColor="@color/purple_700"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

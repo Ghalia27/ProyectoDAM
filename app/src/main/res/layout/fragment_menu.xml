@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn_ajustes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajustes"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:icon="@drawable/ic_baseline_settings_24"/>
+
+        <Button
+            android:id="@+id/btn_contactanos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contactanos"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:icon="@drawable/ic_baseline_email_24"/>
+
+        <Button
+            android:id="@+id/btn_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reportar problemas"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:icon="@drawable/ic_baseline_report_problem_24"/>
+
+        <Button
+            android:id="@+id/btn_cerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:icon="@drawable/ic_baseline_exit_to_app_24"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
