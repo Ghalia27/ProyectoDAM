@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.room.PrimaryKey
-import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
-import kotlinx.android.synthetic.main.activity_sign_up.etEmail
+import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.fragment_perfil.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -33,7 +32,7 @@ class SignUp : AppCompatActivity() {
 
         val database = AppDatabase.getInstance(this);
 
-        btnSignUp.setOnClickListener {
+        btnSignUp_.setOnClickListener {
             val nombre = etNombre.text.toString()
             val apellido = etApellido.text.toString()
             val email = etEmail.text.toString()
@@ -41,7 +40,7 @@ class SignUp : AppCompatActivity() {
             val contrasenia = etContraseña.toString()
             val fecha_nacimiento= etFchNacimiento.toString()
 
-            val usuario = Usuario( nombre, apellido, fecha_nacimiento, email, contrasenia, celular, 2)
+            val usuario = Usuario( nombre, apellido, fecha_nacimiento, email, contrasenia, celular, 5)
 
             Toast.makeText(this, "Se ha registrado correctamente a $apellido, $nombre", Toast.LENGTH_LONG).show()
             CoroutineScope(Dispatchers.IO).launch {
@@ -52,7 +51,7 @@ class SignUp : AppCompatActivity() {
         link_iniciar.setOnClickListener {
             intent = Intent(this, SignIn::class.java)
             startActivity(intent)
-
         }
+
     }
 }

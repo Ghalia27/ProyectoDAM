@@ -6,7 +6,7 @@ import java.util.*
 
 @Entity(tableName="reserva")
 class Reserva(
-    val fecha_res:Date,
+    val fecha_res:String,
     val horario_res:String,
     val cod_est:Int,
     val cant_personas:Int,
