@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.room.PrimaryKey
+import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
+import kotlinx.android.synthetic.main.activity_sign_up.etEmail
 import kotlinx.android.synthetic.main.fragment_perfil.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -46,6 +48,11 @@ class SignUp : AppCompatActivity() {
                 database.usuarioDAO().insertAll(usuario)
                 this@SignUp.finish()
             }
+        }
+        link_iniciar.setOnClickListener {
+            intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+
         }
     }
 }
