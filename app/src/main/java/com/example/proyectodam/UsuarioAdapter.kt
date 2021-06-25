@@ -1,4 +1,5 @@
 package com.example.proyectodam
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -18,42 +19,40 @@ class UsuarioAdapter (private val usuarios: ArrayList<Usuario> = ArrayList()) : 
         return usuarios[posicion]
     }
 
-
-
     fun eliminarUsuario(posicion : Int){
-
         usuarios.removeAt(posicion)
-
         notifyItemRemoved(posicion)
 
     }
 
-
-
     fun restaurarTarea(posicion : Int, usuario : Usuario){
-
         usuarios.add(posicion,usuario)
-
         notifyItemInserted(posicion)
-
     }
 
 
 
     fun cambiarPosicionItem(posicionInicial : Int, posicionFinal:Int){
-
         val tarea = usuarios[posicionInicial]
-
         usuarios.removeAt(posicionInicial)
-
         usuarios.add(posicionFinal,tarea)
-
         notifyItemMoved(posicionInicial,posicionFinal)
+    }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBindViewHolder(holder: UsuarioViewHolder, position: Int) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getItemCount(): Int {
+        TODO("Not yet implemented")
     }
 
 
-
+/*
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
 
         val view = LayoutInflater.from(parent.context)
@@ -107,6 +106,6 @@ class UsuarioAdapter (private val usuarios: ArrayList<Usuario> = ArrayList()) : 
         }
 
     }
-
+*/
 
 }

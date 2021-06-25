@@ -9,7 +9,6 @@ class Usuario(
     val apellido:String,
     val fechaNacimiento:String,
     val email:String,
-    val correo:String,
     val password: String,
     val celular:String,
     @PrimaryKey(autoGenerate = true)
